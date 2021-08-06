@@ -22,11 +22,6 @@ word_lemma = WordNetLemmatizer()
 porter = PorterStemmer()
 lancaster = LancasterStemmer()
 
-"""st = StanfordNERTagger(
-    '/Users/jashdoshi/Desktop/Nyu courses/Predictive Analytics/Assignments/stanford-ner-2020-11-17/classifiers/english.all.3class.distsim.crf.ser.gz',
-    '/Users/jashdoshi/Desktop/Nyu courses/Predictive Analytics/Assignments/stanford-ner-2020-11-17/stanford-ner.jar',
-    encoding='utf-8')"""
-
 
 class preprocess():
     def __init__(self, text):
@@ -215,7 +210,7 @@ def remove_punctuation(text):
 if __name__ == '__main__':
 
     # path to all the files
-    file_path = open("/Users/jashdoshi/Desktop/Nyu courses/Predictive Analytics/Assignments/data.txt", "r")
+    file_path = open("data.txt", "r")
 
     combined_list = []
     # reading paths
