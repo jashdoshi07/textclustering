@@ -24,6 +24,4 @@ class PCA:
         proj_data = pd.DataFrame(proj1, columns=['pc1'])
         proj_data['pc2'] = proj2
 
-        #print(proj_data)
-
         return proj_data
