@@ -6,12 +6,8 @@ from collections import Counter
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 
-
-
-
 def freq_matrix(data, data_sub):
     word_set = {}
-
 
     # print(tokens)
     for i in range(len(data)):
@@ -49,9 +45,6 @@ def freq_matrix(data, data_sub):
                 break
 
         final_5.append(inbetween)
-
-    #print(top_5)
-    #print(final_5)
 
     text_dataframe = pd.DataFrame(final_5)
 
@@ -104,8 +97,6 @@ def freq_matrix(data, data_sub):
 
     maximum_str = dataframe.idxmax(axis=1)
 
-    #print(dataframe.idxmax(axis=1))
-
     # print(type(word_array[0]))
     # print(type(dataframe))
     # print(dataframe.columns)
@@ -138,8 +129,7 @@ def freq_matrix(data, data_sub):
     for words, counts in idf.items():
         idf[words] = log(corpus_total_docs / (float(counts)))
 
-    # print(idf)
-
+    
     # calculating tf-idf
     tf_idf = []
 
