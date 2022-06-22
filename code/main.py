@@ -167,7 +167,6 @@ if __name__ == '__main__':
                 text = text.replace("\n", " ")
             combined_list.append(text)
 
-    #print(type(combined_list))
 
     # print(terms)
     file_path.close()
