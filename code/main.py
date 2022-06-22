@@ -40,10 +40,6 @@ class preprocess():
                 names.append(word.text)
                 desig.append(word.label_)
 
-                #print(word.text, word.label_)
-        #print(names)
-        #print(desig)
-
         updated = []
         for i in range(len(text)):
             tokens = word_tokenize(text[i])
@@ -53,61 +49,6 @@ class preprocess():
 
         thresh = (len(names)-1)
         passing_final = []
-
-        '''while i < thresh:
-            current = names[i]
-            current = current.upper()
-            print(current)
-            next = names[i + 1]
-            next = next.upper()
-            print(next)
-            passing = []
-            flag = 0
-            for line in updated:
-                print(line)
-                if flag == 0:
-                    for j in range(len(line) -1):
-                        if current == line[j].upper() and next == line[j+1].upper():
-                            flag = 1
-                            print("yes")
-                            break
-
-            i = i +1'''
-
-
-        '''while i<=thresh:
-            current = names[i]
-            current = current.upper()
-            print(current)
-            next = names[i+1]
-            next = next.upper()
-            print(next)
-            passing =[]
-            flag = 0
-            for line in updated:
-                print(line)
-                if flag == 0:
-                    for j in range(len(line)-1):
-                        #print(line[j])
-                        if current == line[j].upper() and next == line[j+1].upper() and desig[i]==desig[i+1]:
-                            entry = current + " " + next
-                            passing.append(entry)
-                            #print(passing)
-                            i = i + 1
-                            flag = 1
-                            break
-                        elif (current == line[j].upper() and next != line[j+1].upper()) or (current == line[j].upper() and next == line[j+1].upper() and desig[i]!=desig[i+1]) :
-                            passing.append(current)
-                            i = i + 1
-                            flag = 1
-                            break
-
-                elif flag != 0:
-                    break
-                passing_final.append(passing)
-
-
-        print(passing_final)'''
 
     pass
 
