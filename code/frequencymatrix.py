@@ -12,26 +12,20 @@ define the workflows and utility functions
 def freq_matrix(data, data_sub):
     word_set = {}
 
-    # print(tokens)
     for i in range(len(data)):
         word_set = set(data[i]).union(set(word_set))
 
-    # print(word_set)
     word_array = []
     for i in range(len(data)):
         word_array.append(dict.fromkeys(word_set, 0))
 
-    # print(word_array)
-
     for i in range(len(data)):
-        # print(len(tokens[i]))
         for j in data[i]:
             word_array[i][j] += 1
 
     top_5 = []
 
     for i in word_array:
-        #print(i)
         top_5_dict = {}
 
         top_5_dict = sorted(i.items(), key=lambda output: output[1], reverse=True)
@@ -65,8 +59,6 @@ def freq_matrix(data, data_sub):
     for i in topic1[1:]:
         counter1.update(i)
 
-    #print(counter1.most_common())
-
     title1 = counter1.most_common()
     title1 = title1[0][0]
 
@@ -85,13 +77,11 @@ def freq_matrix(data, data_sub):
     for i in topic3[1:]:
         counter3.update(i)
 
-    #print(counter3.most_common())
     title3 = counter3.most_common()
     title3 = title3[0][0]
 
     print("Topic for third folder is ", title3)
 
-    # print(word_set)
     dataframe = pd.DataFrame(word_array)
 
 
@@ -118,10 +108,6 @@ def freq_matrix(data, data_sub):
         tf_total_list.append(tf_list)
 
     tf_dataframe = pd.DataFrame(tf_total_list)
-    # print(tf_dataframe)
-
-    # print(idf)
-    # print(corpus_total_docs)
 
     for words, counts in idf.items():
         idf[words] = log(corpus_total_docs / (float(counts)))
@@ -148,7 +134,5 @@ def freq_matrix(data, data_sub):
     process_sub = tf_idf_sub.fit_transform(data_sub)
 
     process_sub = process_sub.toarray()
-    #print(type(process_sub))
-    #print(process_sub)
 
     return dataframe, tfidf_dataframe, process_sub
