@@ -1,6 +1,9 @@
 import matplotlib.pyplot as plt
 
 
+"""
+Module for graph plotting
+"""
 class Plot():
     def __init__(self, pca, centers):
         self.pca = pca
