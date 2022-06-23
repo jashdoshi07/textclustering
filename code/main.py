@@ -167,8 +167,6 @@ if __name__ == '__main__':
                 text = text.replace("\n", " ")
             combined_list.append(text)
 
-
-    # print(terms)
     file_path.close()
 
     processed_list = []
@@ -238,8 +236,4 @@ if __name__ == '__main__':
     plotting = Plot(out_pca, centers)
 
     plotting.graph()
-
-
-
-
 
