@@ -16,7 +16,6 @@ class Kmeans:
 
         max_iter: int, number of iterations to run algorithm, default: 200"""
 
-
     def __init__(self, k, seed=None, value="euclid", max_iter=500):
         self.k = k
         self.seed = seed
