@@ -16,18 +16,15 @@ from accuracy import confusion_matrix
 from graphs import Plot
 from frequencymatrix import freq_matrix
 
-
+#the instances to be used
 word_lemma = WordNetLemmatizer()
-
 porter = PorterStemmer()
 lancaster = LancasterStemmer()
-
 
 class preprocess():
     def __init__(self, text):
         # ner tagging
         NER = spacy.load("en_core_web_sm")
-
         # defining the lists
         names = []
         desig = []
@@ -145,8 +142,6 @@ def remove_punctuation(text):
     #print(text)
     return text
 
-
-
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
@@ -234,6 +229,5 @@ if __name__ == '__main__':
 
     #visualizing
     plotting = Plot(out_pca, centers)
-
     plotting.graph()
 
