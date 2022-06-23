@@ -2,7 +2,10 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics import pairwise_distances
 
-
+"""
+Class for clustering
+Usage : create a class instance to use it more freely
+"""
 class Kmeans:
     """ K Means Clustering
     Parameters
