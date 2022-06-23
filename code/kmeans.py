@@ -2,10 +2,12 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics import pairwise_distances
 
-
+"""
+Class for clustering
+Usage : create a class instance to use it more freely
+"""
 class Kmeans:
     """ K Means Clustering
-
     Parameters
     -----------
         k: int , number of clusters
@@ -13,7 +15,6 @@ class Kmeans:
         seed: int, will be randomly set if None
 
         max_iter: int, number of iterations to run algorithm, default: 200"""
-
 
     def __init__(self, k, seed=None, value="euclid", max_iter=500):
         self.k = k
@@ -25,7 +26,6 @@ class Kmeans:
 
     def initialise_centroids(self, data):
         """Randomly Initialise Centroids
-
         Parameters
         ----------
         data: array or matrix, number_rows, number_features
@@ -34,10 +34,6 @@ class Kmeans:
         --------
         centroids: array of k centroids chosen as random data points
         """
-
-        #initial_centroids = np.random.permutation(data.shape[0])[:self.k]
-        #print(initial_centroids)
-        #print(type(initial_centroids))
         initial_centroids = [0,8,16]
         #print(initial_centroids)
         self.centroids = data[initial_centroids]
@@ -73,7 +69,6 @@ class Kmeans:
     def update_centroids(self, data):
         """Computes average of all data points in cluster and
            assigns new centroids as average of data points
-
         Parameters
         -----------
         data: array or matrix, number_rows, number_features

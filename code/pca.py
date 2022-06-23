@@ -1,6 +1,10 @@
 import pandas as pd
 import numpy as np
 
+"""
+Class pca is used to find the principal 
+components or can be used for feature engineering as well.
+"""
 class PCA:
     def __init__(self, matrix):
         self.matrix = matrix
