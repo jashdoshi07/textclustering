@@ -5,7 +5,6 @@ from sklearn.metrics import pairwise_distances
 
 class Kmeans:
     """ K Means Clustering
-
     Parameters
     -----------
         k: int , number of clusters
@@ -34,10 +33,6 @@ class Kmeans:
         --------
         centroids: array of k centroids chosen as random data points
         """
-
-        #initial_centroids = np.random.permutation(data.shape[0])[:self.k]
-        #print(initial_centroids)
-        #print(type(initial_centroids))
         initial_centroids = [0,8,16]
         #print(initial_centroids)
         self.centroids = data[initial_centroids]
