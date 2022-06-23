@@ -24,7 +24,6 @@ class Kmeans:
 
     def initialise_centroids(self, data):
         """Randomly Initialise Centroids
-
         Parameters
         ----------
         data: array or matrix, number_rows, number_features
@@ -68,7 +67,6 @@ class Kmeans:
     def update_centroids(self, data):
         """Computes average of all data points in cluster and
            assigns new centroids as average of data points
-
         Parameters
         -----------
         data: array or matrix, number_rows, number_features
