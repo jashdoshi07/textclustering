@@ -49,7 +49,10 @@ class preprocess():
 
     pass
 
-
+"""
+Classs for some pre-processing work. Needed in case the date is not
+pre-processed already.
+"""
 class processing():
     def __init__(self, text):
         # removing stop-words
