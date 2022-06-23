@@ -54,7 +54,6 @@ def freq_matrix(data, data_sub):
     topic2 = final_5[8:16]
     topic3 = final_5[16:]
 
-
     counter1 = Counter(topic1[0])
     for i in topic1[1:]:
         counter1.update(i)
@@ -83,7 +82,6 @@ def freq_matrix(data, data_sub):
     print("Topic for third folder is ", title3)
 
     dataframe = pd.DataFrame(word_array)
-
 
     maximum_str = dataframe.idxmax(axis=1)
 
@@ -124,15 +122,9 @@ def freq_matrix(data, data_sub):
 
         tf_idf.append(tfidf_dict)
 
-    # print(tf_idf)
-
     tfidf_dataframe = pd.DataFrame(tf_idf)
-    # print(tfidf_dataframe)
-
-
     tf_idf_sub = TfidfVectorizer()
     process_sub = tf_idf_sub.fit_transform(data_sub)
-
     process_sub = process_sub.toarray()
 
     return dataframe, tfidf_dataframe, process_sub
