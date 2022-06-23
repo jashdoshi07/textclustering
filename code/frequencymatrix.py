@@ -24,7 +24,8 @@ def freq_matrix(data, data_sub):
             word_array[i][j] += 1
 
     top_5 = []
-
+    
+    #lopp for finding the best top-5 in a dict
     for i in word_array:
         top_5_dict = {}
 
