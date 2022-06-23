@@ -5,6 +5,9 @@ from math import log
 from collections import Counter
 from sklearn.feature_extraction.text import TfidfVectorizer
 
+"""
+define the workflows and utility functions
+"""
 
 def freq_matrix(data, data_sub):
     word_set = {}
@@ -48,8 +51,6 @@ def freq_matrix(data, data_sub):
 
     text_dataframe = pd.DataFrame(final_5)
 
-    #print(text_dataframe)
-
     file = open("frequntwords.txt", "w")
     file.close()
 
@@ -90,21 +91,17 @@ def freq_matrix(data, data_sub):
 
     print("Topic for third folder is ", title3)
 
-
     # print(word_set)
     dataframe = pd.DataFrame(word_array)
 
 
     maximum_str = dataframe.idxmax(axis=1)
 
-    # print(type(word_array[0]))
-    # print(type(dataframe))
-    # print(dataframe.columns)
-
     corpus_total_docs = 0
     tf_total_list = []
 
     idf = dict.fromkeys(word_set, 0)
+
     # counting tf
     for i in range(len(data)):
 
