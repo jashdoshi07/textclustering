@@ -1,10 +1,12 @@
 import matplotlib.pyplot as plt
 
-
 """
 Module for graph plotting
 """
 class Plot():
+    """
+    function : plot the graph
+    """
     def __init__(self, pca, centers):
         self.pca = pca
         self.centers = centers
